@@ -5,4 +5,10 @@ class HomeController < ApplicationController
 
   def about
   end
+  
+  def create
+    @post = Post.new(content: params[:content])
+    @post.save
+    redirect_to("/")
+  end
 end

@@ -1,4 +1,16 @@
 <h1>Top</h1>
+<div class="container">
+   <%= form_tag("/home/create") do %>
+     <div class="form">
+      <div class="form-body">
+      <textarea name="content"></textarea>
+      <div class="itachi">
+       <input type="submit" value="投稿">
+         </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 <% @ps.each do |p| %>
-    <p><%= p.content %></p>
+    <p class="sasuke"><%= p.content %></p>
 <% end %>
