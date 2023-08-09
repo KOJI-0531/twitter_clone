@@ -1,14 +1,27 @@
-.form-body {
-    text-align:center;
+.container {
+    height:80%;
+    width:100%;
 }
 
-.itachi {
-    position:relative;
-    left:150px;
-    bottom:34px;
+.main {
+     max-width: 1200px;
+     margin: 0 auto;
 }
 
+.form_container {
+     max-width: 600px;
+     margin: 0 auto;
+     display:flex;
+     align-items:center;
+     justify-content:space-evenly;
+}
 
-.sasuke {
-    text-align:center;
+.posts {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.posts_content {
+    max-width: 600px;
+    margin: 0 auto;
 }
