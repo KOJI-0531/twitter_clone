@@ -1,0 +1,15 @@
+<div class="main posts-edit">
+  <div class="container">
+     <%= form_with model: @post, url: "#", class: :form_container do |f| %>
+     <%= form_with model: @post, url: "posts#update", class: :form_update do |u| %>
+       <div class= "post_edit_form">
+         <div class="post_edit_form_item">
+          <%= f.label :content %>
+          <%= f.text_area :content %>
+         </div>
+          <%= f.submit %>
+        </div>
+        <% end %>
+        <% end %>
+  </div>
+</div>

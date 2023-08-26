@@ -1,0 +1,21 @@
+.posts-edit {
+    padding-top:2rem;
+}
+
+.post_edit_form {
+    display: flex;
+    flex-direction:column;
+}
+
+.post_edit_form_item {
+    padding-bottom: 1.4rem;
+}
+
+.post_edit_form_item textarea {
+    width: 48.5rem;
+    height: 8.5rem;
+}
+
+.post_edit_form input {
+    border-radius: 15rem;
+}
