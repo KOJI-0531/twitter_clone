@@ -1,15 +1,14 @@
 <div class="main posts-edit">
   <div class="container">
-     <%= form_with model: @post, url: "#", class: :form_container do |f| %>
-     <%= form_with model: @post, url: "posts#update", class: :form_update do |u| %>
+     <%= form_with model: @post, url: "/posts/#{@post.id}/update", class: :form_container do |f| %>
        <div class= "post_edit_form">
          <div class="post_edit_form_item">
           <%= f.label :content %>
           <%= f.text_area :content %>
          </div>
           <%= f.submit %>
-        </div>
-        <% end %>
-        <% end %>
+     <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+       </div>
+     <% end %>
   </div>
 </div>
