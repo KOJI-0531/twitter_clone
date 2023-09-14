@@ -14,10 +14,11 @@ class PostsController < ApplicationController
     
     redirect_to("/")
   end
-  
+    
    def destroy
     @post = Post.find_by(id: params[:id])
-    @post.destroy
+    @post.del_flg = true
+    @post.save
    redirect_to("/")
   end
 end
