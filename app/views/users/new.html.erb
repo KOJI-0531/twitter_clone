@@ -3,21 +3,23 @@
     <div class="form-heading">新規ユーザー登録</div>
     <div class="form users-form">
       <div class="form-body">
-        <!--<%= form_tag("/users/create") do %>-->
+      
  
-        <%= form_with model: @user, uri: "/users/create" do |form| %>
-         <%= form.text_area :name %>
-        <p><%= form.text_area :email %></p> 
-        <%= form.submit %>
-        <% end %>
-        
-        <!--<p>ユーザー名</p>-->
-        <!--<input  name="name">-->
-        <!--<p>メールアドレス</p>-->
-        <!--<input name="email">-->
-        <!--<input type="submit" value="新規登録">-->
-        <!--<% end %>-->
-      </div>
-    </div>
+        <%= form_with model: @user, url: "/users/create" do |form| %>
+        <div>
+          <label for="email">email</label>
+          <%= form.text_field :email %>
+        </div>
+        <div>
+        <label for="password">password</label>
+          <%= form.password_field :password %>
+        </div>
+         <div>
+        <label for="password">password</label>
+          <%= form.password_field :password_confirmation %>
+          <%= form.submit %> 
+           <% end %>
+     </div>
   </div>
+</div>
 </div>

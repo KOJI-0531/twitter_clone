@@ -5,6 +5,12 @@
             <li class="nav-item">
                 <%= link_to "Top", "/" %>
             </li>
+             <% if session[:user_id] %>
+             <li>
+              現在ログインしているユーザーのid:
+              <%= session[:user_id] %>
+             </li>
+            <% end %>
             <li class="nav-item">
                 <%= link_to "About", "/about" %>
             </li>
@@ -13,6 +19,9 @@
             </li>
             <li>
                 <%= link_to("新規登録", "/signup") %>
+            </li>
+             <li>
+                <%= link_to("ログイン", "/login") %>
             </li>
             
         </ul>
