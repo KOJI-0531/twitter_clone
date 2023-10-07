@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get "signup" => "users#new"
   get 'users/index'
   get "users/:id" => "users#show"
-  get "login" => "users#login_form"
-  post "login" => "users#login"
+  get "login" => "sessions#new"
+  post "login" => "sessions#create", as: "sessions"
+  post "logout" => "sessions#logout"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
