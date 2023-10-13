@@ -17,13 +17,18 @@
             <li class="nav-item">
                 <%= link_to "ユーザー一覧", "/users/index" %>
             </li>
+           <% if session[:user_id] %>
             <li>
-                <%= link_to("新規登録", "/signup") %>
+                <%= link_to("ログアウト", "/logout", method: :delete) %>
             </li>
-             <li>
-                <%= link_to("ログイン", "/login") %>
-            </li>
-            
+            <% else %>
+                <li>
+                    <%= link_to("新規登録", "/signup") %>
+                </li>
+                <li>
+                    <%= link_to("ログイン", "/login") %>
+                </li>
+            <% end %>
         </ul>
     </div>
 </div>

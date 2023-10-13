@@ -10,8 +10,10 @@ class HomeController < ApplicationController
   end
   
   def create
-    @post = Post.new(content: params[:post][:content])
+    @post = Post.new(content: params[:post][:content],user_id: @current_user.id)
+    
     @post.save
+    
     redirect_to("/")
   end
 end

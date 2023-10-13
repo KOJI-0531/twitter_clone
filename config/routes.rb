@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get "users/:id" => "users#show"
   get "login" => "sessions#new"
   post "login" => "sessions#create", as: "sessions"
-  post "logout" => "sessions#logout"
+  delete "logout" => "sessions#logout"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
