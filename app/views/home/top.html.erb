@@ -9,7 +9,7 @@
             <div class="posts_content">
                 <% @ps.each do |p| %>
                     <!--<% if p.del_flg == false %>-->
-                        <p><%= link_to p.content, p_edit_path(p) %> |<%= link_to("削除", "/posts/#{p.id}/destroy", {method: "post"}) %></p>
+                      <p><%= p.user.email %> | <%= link_to p.content, p_edit_path(p) %> |<%= link_to("削除", "/posts/#{p.id}/destroy", {method: "post"}) %></p>
                     <% end %>    
                 <% end %>
             </div>

@@ -10,7 +10,9 @@ class HomeController < ApplicationController
   end
   
   def create
-    @post = Post.new(content: params[:post][:content],user_id: @current_user.id)
+    @current_user = " 値はあるよ"
+    puts "@current_userの値は...#{@current_user}"
+    @post = Post.new(content: params[:post][:content],user_id: session[:user_id])
     
     @post.save
     

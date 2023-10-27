@@ -10,5 +10,5 @@
 end
 
 (1..10).each do |i|
-    User.create(email: "test#{i}@test.com" , password_confirmation: "test#{i}@test.com")
+    User.create(email: "test#{i}@test.com",password: "test#{i}@test.com", password_confirmation: "test#{i}@test.com")
 end
